@@ -55,6 +55,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -62,6 +65,9 @@
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.chart10 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -81,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart7)).BeginInit();
@@ -233,6 +240,9 @@
             // 
             this.panel1.AllowDrop = true;
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.chart10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -259,25 +269,71 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(422, 1654);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(418, 386);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Boys Vs Girls Pass";
+            // 
+            // chart10
+            // 
+            this.chart10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.chart10.BorderlineColor = System.Drawing.Color.Transparent;
+            this.chart10.CausesValidation = false;
+            chartArea7.Name = "ChartArea1";
+            this.chart10.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart10.Legends.Add(legend7);
+            this.chart10.Location = new System.Drawing.Point(361, 100);
+            this.chart10.Name = "chart10";
+            this.chart10.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart10.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))))};
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series7.Color = System.Drawing.Color.Teal;
+            series7.Legend = "Legend1";
+            series7.MarkerBorderColor = System.Drawing.Color.Black;
+            series7.Name = "BoysVsGirl";
+            series7.YValuesPerPoint = 4;
+            this.chart10.Series.Add(series7);
+            this.chart10.Size = new System.Drawing.Size(246, 266);
+            this.chart10.TabIndex = 17;
+            this.chart10.TabStop = false;
+            this.chart10.Text = "chart10";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Control;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(636, 400);
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(707, 381);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 17);
+            this.label9.Size = new System.Drawing.Size(112, 17);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Exam Result";
+            this.label9.Text = "Class Exam Result";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.Control;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(194, 400);
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(165, 381);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 17);
             this.label8.TabIndex = 15;
@@ -298,7 +354,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(370, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(194, 25);
@@ -308,56 +364,56 @@
             // chart9
             // 
             this.chart9.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea7.Name = "ChartArea1";
-            this.chart9.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            legend7.TitleBackColor = System.Drawing.Color.Transparent;
-            this.chart9.Legends.Add(legend7);
-            this.chart9.Location = new System.Drawing.Point(513, 99);
+            chartArea8.Name = "ChartArea1";
+            this.chart9.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            legend8.TitleBackColor = System.Drawing.Color.Transparent;
+            this.chart9.Legends.Add(legend8);
+            this.chart9.Location = new System.Drawing.Point(632, 99);
             this.chart9.Name = "chart9";
             this.chart9.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart9.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224))))),
-        System.Drawing.Color.Empty};
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series7.Color = System.Drawing.Color.Transparent;
-            series7.LabelForeColor = System.Drawing.Color.WhiteSmoke;
-            series7.Legend = "Legend1";
-            series7.Name = "Result";
-            this.chart9.Series.Add(series7);
-            this.chart9.Size = new System.Drawing.Size(329, 282);
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))))};
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series8.Color = System.Drawing.Color.Transparent;
+            series8.LabelForeColor = System.Drawing.Color.DimGray;
+            series8.Legend = "Legend1";
+            series8.Name = "Result";
+            this.chart9.Series.Add(series8);
+            this.chart9.Size = new System.Drawing.Size(232, 268);
             this.chart9.TabIndex = 12;
             this.chart9.Text = "chart9";
             // 
             // chart8
             // 
             this.chart8.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea8.Name = "ChartArea1";
-            this.chart8.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart8.Legends.Add(legend8);
+            chartArea9.Name = "ChartArea1";
+            this.chart8.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chart8.Legends.Add(legend9);
             this.chart8.Location = new System.Drawing.Point(84, 100);
             this.chart8.Name = "chart8";
             this.chart8.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart8.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))))};
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series8.Color = System.Drawing.Color.Transparent;
-            series8.LabelForeColor = System.Drawing.Color.WhiteSmoke;
-            series8.Legend = "Legend1";
-            series8.Name = "Student";
-            this.chart8.Series.Add(series8);
-            this.chart8.Size = new System.Drawing.Size(335, 281);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series9.Color = System.Drawing.Color.Transparent;
+            series9.LabelForeColor = System.Drawing.Color.DimGray;
+            series9.Legend = "Legend1";
+            series9.Name = "Student";
+            this.chart8.Series.Add(series9);
+            this.chart8.Size = new System.Drawing.Size(241, 267);
             this.chart8.TabIndex = 11;
             this.chart8.Text = "chart8";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(81, 528);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
@@ -367,7 +423,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(81, 509);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
@@ -377,7 +433,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(81, 490);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
@@ -387,7 +443,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(82, 469);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
@@ -397,11 +453,11 @@
             // chart7
             // 
             this.chart7.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea9.Name = "ChartArea1";
-            this.chart7.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart7.Legends.Add(legend9);
-            this.chart7.Location = new System.Drawing.Point(226, 1199);
+            chartArea10.Name = "ChartArea1";
+            this.chart7.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart7.Legends.Add(legend10);
+            this.chart7.Location = new System.Drawing.Point(194, 1207);
             this.chart7.Name = "chart7";
             this.chart7.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart7.PaletteCustomColors = new System.Drawing.Color[] {
@@ -411,12 +467,12 @@
         System.Drawing.Color.DarkOrange,
         System.Drawing.Color.MediumSeaGreen,
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))))};
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series9.LabelForeColor = System.Drawing.Color.White;
-            series9.Legend = "Legend1";
-            series9.Name = "Nepali";
-            this.chart7.Series.Add(series9);
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series10.LabelForeColor = System.Drawing.Color.White;
+            series10.Legend = "Legend1";
+            series10.Name = "Nepali";
+            this.chart7.Series.Add(series10);
             this.chart7.Size = new System.Drawing.Size(501, 342);
             this.chart7.TabIndex = 6;
             this.chart7.Text = "chart7";
@@ -425,7 +481,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(370, 596);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 25);
@@ -451,6 +507,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart7)).EndInit();
@@ -479,5 +536,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart10;
+        private System.Windows.Forms.Label label11;
     }
 }

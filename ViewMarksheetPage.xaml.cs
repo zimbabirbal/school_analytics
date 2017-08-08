@@ -27,7 +27,7 @@ namespace SEproject
         int FullMark = 100;
        
         string sRollNo, sName, sNepali, sEnglish, sMath, spop, sScience, sSocial,sopt1,sopt2,sopt3;
-        int nepali, english, math, pop, science, social,opt1,opt2,opt3;
+        int nepali, english, math, pop, science, social,opt1,opt2,opt3, Admin_class;
 
         private void textBox72_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -61,7 +61,7 @@ namespace SEproject
         private void button1_Click(object sender, RoutedEventArgs e)
         {
 
-            Form1 forms = new Form1(sName, sId.Text, (comboBox.SelectedIndex + 1), nepali, english, math, pop, science, social, opt1, opt2, opt3);
+            Form1 forms = new Form1(textBox37.Text, sId.Text, (comboBox.SelectedIndex + 1), nepali, english, math, pop, science, social, opt1, opt2, opt3);
             forms.ShowDialog();
         }
 
@@ -75,22 +75,9 @@ namespace SEproject
             {
                 if (c)
                 {
-                    //try
-                    //{
-                       
-                    //    total = Int32.Parse(textBox16.Text) + Int32.Parse(textBox17.Text) + Int32.Parse(textBox18.Text) + Int32.Parse(textBox19.Text) + Int32.Parse(textBox20.Text) + Int32.Parse(textBox31.Text)+Int32.Parse(textBox78.Text) + Int32.Parse(textBox79.Text) + Int32.Parse(textBox80.Text);
-
-                    //}
-                    //catch
-                    //{
-                    //    total = 0;
-                    //    System.Windows.Forms.MessageBox.Show("Something is missing");
-                    //}
-
-                    // string constring = "datasource=localhost;port=3306;username=root;password=12345";
-                    string constring = ConfigurationManager.ConnectionStrings["MySQL"].ToString();
-                    // System.Windows.Forms.MessageBox.Show(comboxx);
                   
+                    string constring = ConfigurationManager.ConnectionStrings["MySQL"].ToString();
+                            
                     Query = "update latestspas.exam set nepali= '" + this.textBox16.Text + "', english='" + this.textBox17.Text + "', science= '" + this.textBox18.Text + "', socialStudies= '" + this.textBox20.Text + "', popAndEnvironment='" + this.textBox31.Text + "', math= '" + this.textBox19.Text + "'where  Student_idStudent='" + this.sId.Text + "' and idClass='" + (comboBox.SelectedIndex + 1) + "' ;";
                    
 
@@ -113,7 +100,7 @@ namespace SEproject
                     {
                         System.Windows.Forms.MessageBox.Show("Error in Updating " + ex.Message);
                     }
-
+                    conDatabase.Close();
                 }
                 else
                 {
@@ -129,7 +116,8 @@ namespace SEproject
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Form2 forms = new Form2(sName, sRollNo);
+            Form2 forms = new Form2(textBox37.Text, sId.Text, Admin_class);
+          
             forms.ShowDialog();
         }
 
@@ -155,6 +143,7 @@ namespace SEproject
                 {
                     sName = myReader.GetString("name");
                     sRollNo = myReader.GetString("roll_no");
+                    
                     //string sRollNo = myReader.GetString("idClass");
                     textBox37.Items.Add(sName);
 
@@ -169,6 +158,7 @@ namespace SEproject
             {
                 MessageBox.Show(ex.Message);
             }
+            conDatabase.Close();
         }
 
         private void button4_Click(object sender, RoutedEventArgs e)
@@ -197,14 +187,12 @@ namespace SEproject
                 {
                     //MessageBox.Show("Data has been Updated");
                     //myReader.Read();
+
+                    sId.Text = myReader.GetString("idStudent");
+                    textBox37_Copy.Text = myReader.GetString("roll_no");
+                    Admin_class = myReader.GetInt32("class");
+
                    
-                    string sStudent = myReader.GetString("idStudent");
-
-                    string sRollNo = myReader.GetString("roll_no");
-                    textBox37_Copy.Text = sRollNo;
-
-                    sId.Text = sStudent;
-                  
 
 
                     // myReader.Read();
@@ -223,15 +211,27 @@ namespace SEproject
             {
                 MessageBox.Show(ex.Message);
             }
+            conDatabase.Close();
         }
 
         public void MarksheetShow()
         {
             //Number_Subject = 6;
-            string Query;
-            //string constring = "datasource=localhost;port=3306;username=root;password=12345";
+            textBox16.Text = "";
+            textBox17.Text = "";
+            textBox18.Text = "";
+            textBox19.Text = "";
+            textBox20.Text = "";
+            textBox31.Text = "";
+            textBox78.Text = "";
+            textBox79.Text = "";
+            textBox80.Text = "";
+            textBox81.Text = "";
+            textBox34.Text = "";
+            textBox33.Text = "";
+
             string constring = ConfigurationManager.ConnectionStrings["MySQL"].ToString();
-            Query = "select * from latestspas.exam where Student_idStudent= '" + sId.Text + "' and idClass='" + (comboBox.SelectedIndex + 1) + "' ;";
+            string Query = "select * from latestspas.exam where Student_idStudent= '" + sId.Text + "' and idClass='" + (comboBox.SelectedIndex + 1) + "' ;";
 
             // check = true;
 
@@ -348,6 +348,7 @@ namespace SEproject
             {
                 System.Windows.Forms.MessageBox.Show("Something errors occurs in Database" + ex.Message);
             }
+            conDatabase.Close();
         }
         private void DateCalculate()
         {
@@ -399,6 +400,7 @@ namespace SEproject
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            conDatabase.Close();
 
         }
         

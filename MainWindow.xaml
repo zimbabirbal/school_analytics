@@ -85,6 +85,28 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
+            <Button Content="Add Attendance  " Margin="2,0,770,0" Height="50" Click="AddAttendenceclick" FontSize="18" Foreground="#FFF9F7F7" BorderBrush="#FF0597B8" FontWeight="SemiBold" HorizontalContentAlignment="Right" TextOptions.TextHintingMode="Animated" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="panda.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.75" ScaleY="0.75"/>
+                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform X="-0.38"/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
             <Button Content="Add Marksheet   " Margin="2,0,770,0" Height="50" Click="AddMarksheetClick" FontSize="18" Foreground="#FFF9F7F7" BorderBrush="#FF0597B8" FontWeight="SemiBold" RenderTransformOrigin="0.1,0.5" TextOptions.TextHintingMode="Animated" HorizontalContentAlignment="Right" >
                 <Button.RenderTransform>
                     <TransformGroup>
@@ -104,28 +126,6 @@
                 </Button.LayoutTransform>
                 <Button.Background>
                     <ImageBrush ImageSource="12.png" Stretch="Uniform">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.75" ScaleY="0.75"/>
-                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                                <TranslateTransform X="-0.38"/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Button.Background>
-            </Button>
-            <Button Content="Add Attendance  " Margin="2,0,770,0" Height="50" Click="AddAttendenceclick" FontSize="18" Foreground="#FFF9F7F7" BorderBrush="#FF0597B8" FontWeight="SemiBold" HorizontalContentAlignment="Right" TextOptions.TextHintingMode="Animated" >
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform X="-0"/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-                <Button.Background>
-                    <ImageBrush ImageSource="panda.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
                             <TransformGroup>
                                 <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.75" ScaleY="0.75"/>

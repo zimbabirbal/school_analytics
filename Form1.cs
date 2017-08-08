@@ -67,7 +67,7 @@ namespace SEproject
         private void ShowAll()
 
         {
-            label1.Text = name + " / " + class_id ;
+            label1.Text = name + " / " + id ;
 
             this.chart1.Series["Marks"].Points.AddXY("nepali", subjects[0]);
             this.chart1.Series["Marks"].Points.AddXY("english", subjects[1]);

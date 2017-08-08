@@ -75,7 +75,7 @@ namespace SEproject
                     {
                         while (myReader.Read())
                         {
-                            spassword = myReader.GetString("password");
+                            spassword = myReader.GetString(("password"));
                             Profession = myReader.GetString("profession");
 
                             // count = count + 1;

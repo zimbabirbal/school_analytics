@@ -23,8 +23,7 @@ namespace SEproject
     public partial class AddStaff : Page
     {
         string Gender, profession;
-        bool checkLogin;
-       // int studentNumber;
+      
         public AddStaff()
         {
             InitializeComponent();
@@ -86,7 +85,7 @@ namespace SEproject
                     string EncrptString = encrpted.Encrypt(this.password.Text);
                     // string constring = "datasource=localhost;port=3306;username=root;password=12345";
                     string constring = ConfigurationManager.ConnectionStrings["MySQL"].ToString();
-                    string Query = "insert into latestspas.staff (idStaff,name, address, mobile_number, gender, dob, email, father_name, mother_name) values ('" + this.Id.Text + "','" + this.Name.Text + "','" + this.Address.Text + "', '" + this.mobile.Text + "', '" + Gender + "', '" + this.DatePicker.Text + "', '" + this.Email1.Text + "', '" + this.FatherName.Text + "', '" + this.MotherName.Text + "') ; insert into latestspas.login (login_id, password,profession,Staff_idStaff) values ('" + this.Id.Text + "', '" + EncrptString + "','" + profession + "','" + this.Id.Text + "');";
+                    string Query = "insert into latestspas.staff (idStaff,name, address, mobile_number, gender, dob, email, father_name, mother_name) values ('" + this.Id.Text + "','" + this.Name.Text + "','" + this.Address.Text + "', '" + this.mobile.Text + "', '" + Gender + "', '" + this.DatePicker.Text + "', '" + this.Email1.Text + "', '" + this.FatherName.Text + "', '" + this.MotherName.Text + "') ; insert into latestspas.login (login_id, password,profession,Staff_idStaff) values ('" + this.Id.Text + "','" +EncrptString+ "','" + profession + "','" + this.Id.Text + "');";
                     MySqlConnection conDatabase = new MySqlConnection(constring);
                     MySqlCommand cmdDatabase = new MySqlCommand(Query, conDatabase);
                     MySqlDataReader myReader;
